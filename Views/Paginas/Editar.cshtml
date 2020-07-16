@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Novo";
+    Business.BusinessPagina _dadosCliente = ViewBag.Pagina;
+}
+
+<h2>Editar Cliente</h2>
+<div class="jumbotron">
+    <div>
+        <a href="/paginas" class="btn btn-default">Voltar</a>
+    </div>
+    <form action="/paginas/@_dadosCliente.Id/alterar" method="post">
+        <div class="form-group">
+            <label for="nome">Id:</label>
+            <input type="text" class="form-control" id="id" name="id" value="@_dadosCliente.Id" readonly />
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="@_dadosCliente.Nome" />
+            <label for="diretorio">Observação</label>
+            <textarea id="conteudo" name="conteudo" class="form-control">@_dadosCliente.Conteudo</textarea>
+            <br />
+            <select name="status" id="staus">
+                <option value="Start">Start</option>
+                <option value="Stop">Stop</option>
+                <option value="Suspend">Suspend</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Salvar</button>
+    </form>
+</div>
+

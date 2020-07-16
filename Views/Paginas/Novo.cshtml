@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Novo";
+}
+
+<h2>Novo Cliente</h2>
+<div class="jumbotron">
+    <div>
+        <a href="/paginas" class="btn btn-default">Voltar</a>
+    </div>
+    <form action="/paginas/criar" method="post">
+        <div class="form-group">
+            <label for="nome">Cliente</label>
+            <input type="text" class="form-control" id="nome" name="nome" />
+            <label for="diretorio">Observação</label>
+            <textarea id="conteudo" name="conteudo" class="form-control"></textarea>
+            <label for="status">Status</label>
+            <br />
+            <select name="status" id="staus">
+                <option value="Start">Start</option>
+                <option value="Stop">Stop</option>
+                <option value="Suspend">Suspend</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">Salvar</button>
+    </form>
+</div>
+
